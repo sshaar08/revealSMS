@@ -36,11 +36,43 @@
             <div class="slides">
                 <section>
                     <section>
-                        <h1>Selenium and Fabric</h1>
-                        <img src="img/sel.jpg" alt="Save All The Things!" >
-                        <img src="img/fab.jpg" alt="Backup" height="356" width="356">
+                        <h2>QA: Quality Assurance</h2>
+                        <img src="img/qastamp.jpg" alt="Traditional">
+                          <aside class="notes">
+                                <ul>
+                                    <li>Everyone has the same copy as the repo</li>
+                                    <li>What if you want to commit code that isn't 100% to test diff options? or roll back</li>
+                                </ul>
+                            </aside>
                     </section>
                     <section>
+                        <h2>QA</h2>
+                        <ul>
+                            <li>Specs</li>
+                            <li>Tests</li>
+                            <li>Reports</li>
+                        </ul>
+                        <aside class="notes">
+                            <ul>
+                                <li>svn update - pull changes down from the repository</li>
+                                <li>svn commit - send files to the repo</li>
+                                <li>svn merge - merge files (or "branches")</li>
+                                <li>svn copy - copy a file or folder structure (into a "branch")</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>QA Automation</h2>
+                        
+                        <img src="img/qaRobot.png" alt="pumpkin">
+                          <aside class="notes">
+                                SVN is awefull at complex merges and change tracking
+                            </aside>
+                    </section>
+                </section>
+                <section>
+
+                <section>
                         <h1>We Will Cover</h1>
                         <ul>
                             <li>What is continuous integration (CI)</li>
@@ -48,7 +80,9 @@
                             <li>Why Selenium and Fabric?</li>
                             <li>How we use it here</li>
                         </ul>
-                    </section>
+                </section>
+                    
+                    
                 </section>
                 <section>
                     <section>
@@ -91,52 +125,13 @@
                         <p></p>
                         <img src="img/pushbutton.gif" alt="Spooning">
                         <aside class="notes">
-                            <ul>
-                                <li>Dev's work on the same features at the same time.</li>
-                                <li>Merges changes in the same file</li>
-                            </ul>
+                           
                         </aside>
                     </section>
                     <section>
                         <h2>Push button code promotion</h2>
                         <p>Deploys</p>
                         <img src="img/launch.gif" alt="Cowboy">
-                    </section>
-                </section>
-                <section>
-                    <section>
-                        <h2>QA: Quality Assurance</h2>
-                        <img src="img/qastamp.jpg" alt="Traditional">
-                          <aside class="notes">
-                                <ul>
-                                    <li>Everyone has the same copy as the repo</li>
-                                    <li>What if you want to commit code that isn't 100% to test diff options? or roll back</li>
-                                </ul>
-                            </aside>
-                    </section>
-                    <section>
-                        <h2>QA</h2>
-                        <ul>
-                            <li>Specs</li>
-                            <li>Tests</li>
-                            <li>Reports</li>
-                        </ul>
-                        <aside class="notes">
-                            <ul>
-                                <li>svn update - pull changes down from the repository</li>
-                                <li>svn commit - send files to the repo</li>
-                                <li>svn merge - merge files (or "branches")</li>
-                                <li>svn copy - copy a file or folder structure (into a "branch")</li>
-                            </ul>
-                        </aside>
-                    </section>
-                    <section>
-                        <h2>QA Automation</h2>
-                        
-                        <img src="img/qaRobot.png" alt="pumpkin">
-                          <aside class="notes">
-                                SVN is awefull at complex merges and change tracking
-                            </aside>
                     </section>
                 </section>
                 <section>
@@ -152,14 +147,12 @@
                             <li>Link Finding</li>
                             <li>So much more</li>
                         </ul>
-                        <aside class="notes">
-                            <ul>
-                                <li>Can test changes/rollback locally</li>
-                                <li>SVN copies a whole folder structure to "branch." Git creates true deltas</li>
-                                <li>MUCH smarter merging. If you move a method, it will understand you did that vs a delete/create</li>
-                                <li>Makes it easy to not commit everything</li>
-                            </ul>
-                        </aside>
+                    </section>
+                    <section>
+                        <h1>Scripting</h1>
+                        <h2>Selenium and Fabric</h2>
+                        <img src="img/sel.jpg" alt="Save All The Things!" >
+                        <img src="img/fab.jpg" alt="Backup" height="356" width="356">
                     </section>
                      <section>
                         <h2>Scripting</h2>
