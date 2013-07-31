@@ -168,15 +168,125 @@
                             <li class='fragment'><a href='https://pypi.python.org/pypi/selenium'>Webdriver (Python library)</a></li></ul>
                     </section>
                     <section>
+                        <h2>Selenium with webdriver<h2>
+                            <h2>KNG Store locations test </h2>
+                            <pre><code data-trim contenteditable>
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import Select
+from selenium.common.exceptions import NoSuchElementException
+import unittest, time, re
+import xlrd
+import pprint
+from StoreLookup import StoreLookUp 
+
+class Test (unittest.TestCase):
+    def setUp(self):
+        self.driver = webdriver.Firefox()
+        self.driver.implicitly_wait(4)
+        self.base_url = "http://kng.qa.aistg.com/"
+        self.verificationErrors = []
+        self.accept_next_alert = True
+
+
+
+    
+    def test_(self):        
+        store_id = '0008'
+        
+        driver = self.driver
+        lookup = StoreLookUp()
+        values = lookup.getValues()  
+        ips = values['ips']
+        pprint.pprint(values['store_data'])
+        for store_id,options in values['store_data'].items():
+        
+        #ipaddr = ips[2]
+        #driver.get(self.base_url + "/?MY_IP=" + ipaddr)
+            print ('opening url %s ' %store_id)
+            driver.get(self.base_url + "/location/" + store_id)
+            
+            time.sleep(2)
+            if options['Open 24hrs'] == 'Yes':
+                try: self.assertTrue(self.is_element_present(By.CSS_SELECTOR, "span.open-24hrs"))
+                except AssertionError as e: self.verificationErrors.append(str(e))
+            if options['Pay at the Pump'] == u'Yes':
+                try: self.assertTrue(self.is_element_present(By.CSS_SELECTOR, "span.pay-at-the-pump"))
+                except AssertionError as e: self.verificationErrors.append(str(e))
+            if options['Redbox'] == u'Yes':
+                try: self.assertTrue(self.is_element_present(By.CSS_SELECTOR, "span.redbox"))
+                except AssertionError as e: self.verificationErrors.append(str(e))
+            if options['Car Wash'] == u'Yes':
+                try: self.assertTrue(self.is_element_present(By.CSS_SELECTOR, "span.car-wash"))
+                except AssertionError as e: self.verificationErrors.append(str(e))
+            if options['E85'] == u'Yes':
+                try: self.assertTrue(self.is_element_present(By.CSS_SELECTOR, "span.e85"))
+                except AssertionError as e: self.verificationErrors.append(str(e))
+            if options['Fresh Food'] == u'Yes':
+                try: self.assertTrue(self.is_element_present(By.CSS_SELECTOR, "span.fresh-food"))
+                except AssertionError as e: self.verificationErrors.append(str(e))
+            if options['Pizza'] == u'Yes':
+                try: self.assertTrue(self.is_element_present(By.CSS_SELECTOR, "span.pizza"))
+                except AssertionError as e: self.verificationErrors.append(str(e))
+            if options['Semi-Truck Fuel Island'] == u'Yes':
+                try: self.assertTrue(self.is_element_present(By.CSS_SELECTOR, "span.semi-truck-fuel-island"))
+                except AssertionError as e: self.verificationErrors.append(str(e))
+            if options['Diesel'] == u'Yes':
+                try: self.assertTrue(self.is_element_present(By.CSS_SELECTOR, "span.diesel"))
+                except AssertionError as e: self.verificationErrors.append(str(e))
+            if options["F'Real"] == u'Yes':
+                try: self.assertTrue(self.is_element_present(By.CSS_SELECTOR, "span.f-real"))
+                except AssertionError as e: self.verificationErrors.append(str(e))
+            #need to add freal and maybe resturant
+        
+        
+    def is_element_present(self, how, what):
+        try: self.driver.find_element(by=how, value=what)
+        except NoSuchElementException, e: return False
+        return True
+    
+    def is_alert_present(self):
+        try: self.driver.switch_to_alert()
+        except NoAlertPresentException, e: return False
+        return True
+    
+    def close_alert_and_get_its_text(self):
+        try:
+            alert = self.driver.switch_to_alert()
+            alert_text = alert.text
+            if self.accept_next_alert:
+                alert.accept()
+            else:
+                alert.dismiss()
+            return alert_text
+        finally: self.accept_next_alert = True
+  
+    def tearDown(self):
+        self.driver.quit()
+        self.assertEqual([], self.verificationErrors)
+    
+        
+
+if __name__ == "__main__":
+    unittest.main()
+    
+
+                            </code></pre>
+                            <aside class='notes'>
+                                <p>This uses an excel python xlrd to read from and excel and grab the data then verify depending on the values in the cells _------demo script in chrome</p>
+                            </aside>
+
+                        </section>
+                    <section>
                         <h2>How does selenium get kicked off</h2>
                         <img src="img/dominos.gif" alt='domino'>
                         <p>Quality the cat waiting for the build to finish</p>
                         <img src='img/cat domino.gif' alt='cat domino'>
                         <p></p>
-                        <p>In Jenkins we have a post build hook the kicks off the selenium job for the partivular enviorment</p>
+                        <p>In Jenkins we have a post build hook the kicks off the selenium job for the particular enviorment</p>
                     </section>
                     <section>
-                        <h1>Scripting</h1>
+                        <h2>Scripting</h2>
                         <h2>Fabric</h2>
                         <h2>What is Fabric</h2>
 
@@ -188,7 +298,7 @@
                     <section>
                         <h1>From many to one</h1>
                         
-                        <h2>Pretty Code</h2>
+                        <h2>Fab Code</h2>
                     <pre><code data-trim contenteditable>
 def update(user, environment, local_branch, remote_branch):
     run('sudo su - %s -c \'cd ~/%s/ && git checkout  %s\'' % (user,environment,local_branch,)) 
@@ -228,8 +338,7 @@ def log(user, directory, branch):
                     </section>
                     <section>
                         <h1>Linkfinding</h1>
-                        <h2>LinkFinder Jenkins</h2>
-                                                <h2> <a href='http://rincewind:8080/job/LinkFinder/'>Linkfinder CLI</a></h2>
+                        <p> <a href='http://rincewind:8080/job/LinkFinder/'>Linkfinder Jenkins</a></p>
 
                     </section>
                     <section>
