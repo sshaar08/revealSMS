@@ -4,10 +4,10 @@
     <head>
         <meta charset="utf-8">
 
-        <title>Selenium and Fabric @ AI</title>
+        <title>Selenium @C&T</title>
 
         <meta name="description" content="Continuous integration and Fabric">
-        <meta name="author" content="Arthur Hinds and Sammy Cray">
+        <meta name="author" content="Sammy Shaar">
 
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -36,7 +36,7 @@
             <div class="slides">
                 <section>
                     <section>
-                        <h2>QA: Quality Assurance</h2>
+                        <h2>Intro To Selenium</h2>
                         <img src="img/qastamp.jpg" alt="Traditional">
                           <aside class="notes">
                                 <ul>
@@ -45,62 +45,41 @@
                                 </ul>
                             </aside>
                     </section>
-                    <section>
-                        <h2>QA</h2>
-                        <ul>
-                            <li>Specs</li>
-                            <li>Tests</li>
-                            <li>Reports</li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h2>QA Automation</h2>
-                        
-                        <img src="img/qaRobot.png" alt="pumpkin">
-                          <aside class="notes">
-                                
-                            </aside>
-                    </section>
-                </section>
-                <section>
-
                 <section>
                         <h1>We Will Cover</h1>
                         <ul>
-                            <li>What is continuous integration (CI)</li>
-                            <li>How does it make our lives better here at Ai</li>
-                            <li>Why Selenium and Fabric?</li>
-                            <li>How we use it here</li>
+                            <li>What is Selenium</li>
+                            <li>How we use it.</li>
+                            <li>When its appropriate</li>
                         </ul>
-                </section>
-                    
-                    
+                </section>  
                 </section>
                 <section>
                     <section>
-                        <h2>What is continuous integration</h2>
-                        <img src="img/ci.png" alt="Backup">
-                        <p> Our definition: The parctice of merging your code base several times a day with the intent to be used in combination with automated unit tests.</p>
+                        <h2>What is Selenium</h2>
+                        <p> Selenium is designed to provide a simpler, more concise programming interface for browser testing. Selenium-WebDriver was developed to better support dynamic web pages where elements of a page may change without the page itself being reloaded. WebDriver’s goal is to supply a well-designed object-oriented API that provides improved support for modern advanced web-app testing problems.</p>
+                    <aside class='notes'>
+                            <ul>
+                                <li>All major browsers, and OS groups plus mobile in Selenium 3.0</li>
+                            </ul>
+                        </aside>
                     </section>
-                    <section> <img src="img/jenkinsCIA.jpg" alt="Backup">
-                        <h1>
-                            <font color="red">How to implement CI</font>
-                        </h1>   
-              
-                        <h2>In comes Jenkins to the rescue</h2>
-                        <ul><li>What is jenkins
-                                <ul><li> Jenkins is an award-winning application that monitors executions of repeated jobs, such as building a software project or jobs run by cron.</li></li></ul>
+                    <section> <img src="img/webdriver_arch.jpg" alt="webdriver_arch">
+                        <h2>On What and where does it run on</h2>
+                        <ul>
+
+                            <li>Almost everywhere</li>
                         </ul>
                         <aside class='notes'>
                             <ul>
-                                <li>simple= automatin framework for servers</li>
+                                <li>All major browsers, and OS groups plus mobile in Selenium 3.0</li>
                             </ul>
                         </aside>
                     </section>
                 </section>
                 <section>
                     <section>
-                        <h2>What Benefit does CI have?</h2>
+                        <h2>What Benefit does Selenium have?</h2>
                     
                     
                         <p class="fragment">Saves Time</p>
@@ -112,7 +91,7 @@
                     </section>
                     <section>
                         <h2>Keeps Development Running Smooth</h2>
-                        <p>and on target</p>
+                        <p>and on target by catching bugs early</p>
                         <img src="img/smooth.gif" alt="Sandy">
                         <img src='img/qabuild.png' alt= 'Qa build'>
                         <aside class="notes">
@@ -120,7 +99,7 @@
                         </aside>
                     </section>
                     <section>
-                        <h2>Push Button Deployment!</h2>
+                        <h2>Push Button Deployment testing!</h2>
                         <p>Soon to come not yet</p>
                         <img src="img/pushbutton.gif" alt="Spooning">
                         <aside class="notes">
@@ -142,222 +121,109 @@
                 </section>
                 <section>
                     <section>
-                        <h2>Ai Automated QA</h2>
+                        <h2>C&T Automation and when to do it</h2>
                         <img src="img/ai_auto.gif" alt="pumpkin">
                     </section>
                    
                   <section>
-                        <h2>Ai Automated QA</h2>
+                        <h2>Best Canidates</h2>
                         <ul>
-                            <li >Scripting</li>
-                            <li>Link Finding</li>
-                            <li>So much more</li>
+                            <li >CRUD Routines</li>
+                            <li>Smoke Testing</li>
+                            <li>Large permutaion sets</li>
                         </ul>
                     </section>
                     <section>
-                        <h1>Scripting</h1>
-                        <h2>Selenium and Fabric</h2>
-                        <img src="img/sel.jpg" alt="Save All The Things!" >
-                        <img src="img/fab.jpg" alt="Backup" height="356" width="356">
+                        <h1>Known Issues</h1>
+                        <ul>
+                            <li >IFRAMES</li>
+                            <li>Drag and drop</li>
+                            <li>Layered navigations with drawers</li>
+                        </ul>
                     </section>
                      <section>
-                        <h1>Scripting</h1>
+                        <h1>Coding in</h1>
                         <h2>Selenium</h2>
-                        <ul><li class='fragment'><a href='https://addons.mozilla.org/en-us/firefox/addon/selenium-ide-button/'>IDE (FireFox Plugin)</a></li>
-                            <li class='fragment'><a href='http://docs.seleniumhq.org/download/' >RemoteControl (cmd line)</a></li>
-                            <li class='fragment'><a href='https://pypi.python.org/pypi/selenium'>Webdriver (Python library)</a></li></ul>
+                        
                     </section>
                     <section>
                         <h2>Selenium with webdriver<h2>
-                            <h2>KNG Store locations test </h2>
+                            <h2>ABA Aem Login</h2>
                             <pre><code data-trim contenteditable>
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import Select
-from selenium.common.exceptions import NoSuchElementException
-import unittest, time, re
-import xlrd
-import pprint
-from StoreLookup import StoreLookUp 
+var expect = require('chai').expect;
+var FormPage = require('../pageobjects/form.page');
+var page = require('../pageobjects/page')
 
-class Test (unittest.TestCase):
-    def setUp(self):
-        self.driver = webdriver.Firefox()
-        self.driver.implicitly_wait(4)
-        self.base_url = "http://kng.qa.aistg.com/"
-        self.verificationErrors = []
-        self.accept_next_alert = True
+describe('auth form', function () {
+    it('should deny access with wrong creds', function () {
+        FormPage.open_login();
+        browser.saveScreenshot('./first1.jpg');
+        FormPage.username.setValue('foo');
+        FormPage.password.setValue('bar');
+        FormPage.submit();
+        browser.saveScreenshot('./first2.jpg');
+        expect(FormPage.flash.getText()).to.contain('User name and password do not match');
+    });
 
+    it('should allow access with correct creds', function () {
+        FormPage.open_login();
+        FormPage.username.setValue('admin');
+        FormPage.password.setValue('ABAcm$');
+        FormPage.submit();
+        page.getbaseurl();
+        browser.saveScreenshot('./second.jpg');
+        expect(browser.getUrl()).to.contain('/projects.html/content/projects');
+    });
+});
+                            </code></pre>
+                            <aside class='notes'>
+                                <p>This logs into the AEM backend and checks for an error message for incorrect login _------demo script in chrome</p>
+                            </aside>
+                        </section>
+                    <section>
+                        <h2>Selenium with webdriver<h2>
+                            <h2>ABA Aem Login</h2>
+                            <pre><code data-trim contenteditable>
+var page = require('./page')
 
+var formPage = Object.create(page, {
+    /**
+     * define elements
+     */
+    username: { get: function () { return browser.element('#username'); } },
+    password: { get: function () { return browser.element('#password'); } },
+    form:     { get: function () { return browser.element('#login'); } },
+    flash:    { get: function () { return browser.element('#error'); } },
 
-    
-    def test_(self):        
-        store_id = '0008'
-        
-        driver = self.driver
-        lookup = StoreLookUp()
-        values = lookup.getValues()  
-        ips = values['ips']
-        pprint.pprint(values['store_data'])
-        for store_id,options in values['store_data'].items():
-        
-        #ipaddr = ips[2]
-        #driver.get(self.base_url + "/?MY_IP=" + ipaddr)
-            print ('opening url %s ' %store_id)
-            driver.get(self.base_url + "/location/" + store_id)
-            
-            time.sleep(2)
-            if options['Open 24hrs'] == 'Yes':
-                try: self.assertTrue(self.is_element_present(By.CSS_SELECTOR, "span.open-24hrs"))
-                except AssertionError as e: self.verificationErrors.append(str(e))
-            if options['Pay at the Pump'] == u'Yes':
-                try: self.assertTrue(self.is_element_present(By.CSS_SELECTOR, "span.pay-at-the-pump"))
-                except AssertionError as e: self.verificationErrors.append(str(e))
-            if options['Redbox'] == u'Yes':
-                try: self.assertTrue(self.is_element_present(By.CSS_SELECTOR, "span.redbox"))
-                except AssertionError as e: self.verificationErrors.append(str(e))
-            if options['Car Wash'] == u'Yes':
-                try: self.assertTrue(self.is_element_present(By.CSS_SELECTOR, "span.car-wash"))
-                except AssertionError as e: self.verificationErrors.append(str(e))
-            if options['E85'] == u'Yes':
-                try: self.assertTrue(self.is_element_present(By.CSS_SELECTOR, "span.e85"))
-                except AssertionError as e: self.verificationErrors.append(str(e))
-            if options['Fresh Food'] == u'Yes':
-                try: self.assertTrue(self.is_element_present(By.CSS_SELECTOR, "span.fresh-food"))
-                except AssertionError as e: self.verificationErrors.append(str(e))
-            if options['Pizza'] == u'Yes':
-                try: self.assertTrue(self.is_element_present(By.CSS_SELECTOR, "span.pizza"))
-                except AssertionError as e: self.verificationErrors.append(str(e))
-            if options['Semi-Truck Fuel Island'] == u'Yes':
-                try: self.assertTrue(self.is_element_present(By.CSS_SELECTOR, "span.semi-truck-fuel-island"))
-                except AssertionError as e: self.verificationErrors.append(str(e))
-            if options['Diesel'] == u'Yes':
-                try: self.assertTrue(self.is_element_present(By.CSS_SELECTOR, "span.diesel"))
-                except AssertionError as e: self.verificationErrors.append(str(e))
-            if options["F'Real"] == u'Yes':
-                try: self.assertTrue(self.is_element_present(By.CSS_SELECTOR, "span.f-real"))
-                except AssertionError as e: self.verificationErrors.append(str(e))
-            #need to add freal and maybe resturant
-        
-        
-    def is_element_present(self, how, what):
-        try: self.driver.find_element(by=how, value=what)
-        except NoSuchElementException, e: return False
-        return True
-    
-    def is_alert_present(self):
-        try: self.driver.switch_to_alert()
-        except NoAlertPresentException, e: return False
-        return True
-    
-    def close_alert_and_get_its_text(self):
-        try:
-            alert = self.driver.switch_to_alert()
-            alert_text = alert.text
-            if self.accept_next_alert:
-                alert.accept()
-            else:
-                alert.dismiss()
-            return alert_text
-        finally: self.accept_next_alert = True
-  
-    def tearDown(self):
-        self.driver.quit()
-        self.assertEqual([], self.verificationErrors)
-    
-        
+    /**
+     * define or overwrite page methods
+     */
+    open_login: {
+        value: function() {
+            browser.url('/', 'login')
+        }
+    },
 
-if __name__ == "__main__":
-    unittest.main()
+    submit: { value: function() {
+        this.form.submitForm();
+    } }
+});
+
+module.exports = formPage
     
 
                             </code></pre>
                             <aside class='notes'>
-                                <p>This uses an excel python xlrd to read from and excel and grab the data then verify depending on the values in the cells _------demo script in chrome</p>
+                                <p>This logs into the AEM backend and checks for an error message for incorrect login _------demo script in chrome</p>
                             </aside>
-
                         </section>
-                    <section>
-                        <h2>How does selenium get kicked off</h2>
-                        <img src="img/dominos.gif" alt='domino'>
-                        <p>Quality the cat waiting for the build to finish</p>
-                        <img src='img/cat domino.gif' alt='cat domino'>
-                        <p></p>
-                        <p>In Jenkins we have a post build hook the kicks off the selenium job for the particular enviorment</p>
-                    </section>
-                    <section>
-                        <h2>Scripting</h2>
-                        <h2>Fabric</h2>
-                        <h2>What is Fabric</h2>
-
-                        <p>command-line tool for streamlining the use of SSH for application deployment or systems administration tasks.</p>
-                        <h2>Specifically, Fabric is:</h2>
-                        <ul><li>A tool that lets you execute arbitrary Python functions via the command line;</li>
-                            <li>A library of subroutines (built on top of a lower-level library) to make executing shell commands over SSH easy and Pythonic.</li><ul>
-                    </section>
-                    <section>
-                        <h1>From many to one</h1>
-                        
-                        <h2>Fab Code</h2>
-                    <pre><code data-trim contenteditable>
-def update(user, environment, local_branch, remote_branch):
-    run('sudo su - %s -c \'cd ~/%s/ && git checkout  %s\'' % (user,environment,local_branch,)) 
-    run('sudo su - %s -c \'cd ~/%s/ && git pull %s\'' % (user,env,remote_branch,)) 
-
-def clone(user, path, gitpath):
-    env.user = user 
-    with cd(path):
-        run('git init')
-        run('git clone %s' % gitpath)
-        
-def updatewithsupport(user,directory, branch):
-    #run('sudo su - %s -c \'cd ~/%s/ && git checkout %s && git pull\'' % (user,directory, branch,)) 
-    run('sudo su - %s -c \'cd ~/%s && git pull --stat\''% (user,directory,))
-
-def status(user,location):
-    run('sudo su - %s -c \'cd ~/%s && git status\''% (user,location))
-
-def clone_with_support(user, location, gitpath):
-    run('sudo su - %s -c \'mkdir -p %s\''% location)
-    run('sudo su - %s -c \'cd %s && git init && git clone %s\''% (user,location,gitpath,)) 
-
-def branch(user, location):
-    run('sudo su - %s -c \'cd %s && git branch\''% (user,location))
-
-def log(user, directory, branch):
-    run('sudo su - %s -c \'cd ~/%s && git log --pretty="%%H by %%cn when: %%cr What:  %%s" --since=1.days \''% (user,directory,))
-    sys.exit("done")    
-                    </code></pre>
-                    <p>One file for all builds <a href="http://rincewind:8080/job/Zenith%20Dev/">here</a>.</p>
-                    </section>
-                    <aside class='notes'>
-                    </aside>
-                    <section>
-                        <h1>Linkfinding</h1>
-                        <img src=img/linksrisk.jpeg  alt='link checking sucks' height='400' width='600'>
-                    </section>
-                    <section>
-                        <h1>Linkfinding</h1>
-                        <p> <a href='http://rincewind:8080/job/LinkFinder/'>Linkfinder Jenkins</a></p>
-
-                    </section>
-                    <section>
-                        <h1>Linkfinding</h1>
-                        <h2>LinkFinder iOS</h2>
-                        <a href="http://screencast.com/t/gqsiY7aShg">Link Checker</a>
-                    </section>
-                    </section>
                 </section>
-              
                 <section>
                     <h2>At your desk research</h2>
-                    <ul>
-                        <li><a href="http://jenkins-ci.org/" target="_blank">Jenkins Homepage</a></li>
-                        <li><a href="http://docs.fabfile.org/" target="_blank">Fabric</a></li>
-                        <li><a href="http://home.snafu.de/tilman/xenulink.html" target="_blank">Windows Link Scraper</a></li>
-                        <li><a href="http://peacockmedia.co.uk/integrity/" target="_blank">Mac Link Scraper</a></li>
-
-                    </ul>
+                    <ul><li class='fragment'><a href='https://http://webdriver.io/'>WebdriverIO (JS library)</a></li>
+                            <li class='fragment'><a href='http://www.seleniumhq.org/'>Selenium Org</a></li>
+                            <li class='fragment'><a href='https://addons.mozilla.org/en-us/firefox/addon/selenium-ide-button/'>IDE (FireFox Plugin)</a></li>
+                        </ul>
                 </section>
                 <section>
                     <h2>Questions?</h2>
