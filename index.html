@@ -1,50 +1,279 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+        <title>reveal.js</title>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/black.css">
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+        <style>
+            #left {
+              width: 200px;
+              float: left;
+            }
+            #right {
+              margin-left: 200px;
+              /* Change this to whatever the width of your left column is*/
+            }
+            .clear {
+              clear: both;
+            }
+        </style>
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+    </head>
+    <body>
+        <div class="reveal">
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section>
+                    <section>
+                        <h2>Diving To Selenium</h2>
+                        <img src="img/qastamp.jpg" alt="Traditional">
+                          <aside class="notes">
+                                <ul>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </aside>
+                    </section>
+                <section>
+                        <h2>What we wanted in a tool</h2>
+                        <ul>
+                            <li>Can test web site functionality</li>
+                            <li>Can test JavaScript functionality</li>
+                            <li>Can be run manually from command line</li>
+                            <li>Can be run automatically using CI</li>
+                            <li>**Have an easy to learn language for non programmers**</li>
+                            <li>Q/A personnel wiuth basic knowledge of HTML and JavaScript can use</li>
+                            <li>Uses open source software only (except cloud based testing platforms)</li>
+                            <li>Can run tests on multiple OS/Browser versions and combinations</li>
+                        </ul>
+                </section>  
+                </section>
+                <section>
+                    <section>
+                        <h2>Selenium With JS Bindings</h2>
+                        <ul>
+                        <li>Node - JS runtime environment</li>
+                        <li>Mocha – test runner framework and executes the test scripts (runner)</li>
+                        <li>Should – assertion library</li>
+                        <li>Web Driver IO – browser control bindings (JS programming language bindings - communicates with Selenium)</li>
+                        <li>Selenium – browser abstraction and running factory (starts and communicates with browser) Grunt - javascript task</li>runner
+                        <li>Grunt-WebDriverIO - plugin for Grunt with Mocha + Web Driver IO as test runner Browser/Mobile drivers + Browsers (IE, Chrome, Firefox, Safari)</li></ul>
+                    <aside class='notes'>
+                            <ul>
+                                <li>All major browsers, and OS groups plus mobile in Selenium 3.0</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section> 
+                        <div id="container">
+                            <div id="left">
+                              <img src="img/LocalSeleniumsetup.png" alt="LocalSeleniumsetup">
+                            </div>
+                            <div id="right">
+                                <img src='img/qabuild.png' alt= 'Qa build'>
+                            </div>
+                        </div>
+                    
+                        <h2>SELENIUM GRID SETUP</h2>
+                        <ul>
+                        <li>Node runs Mocha test framework and runner of test script.</li>
+                        <li>Should is the assertion library.</li>
+                        <li>Web Driver IO communicates with Selenium Hub using JSON Wire Protocol.</li>
+                        <li>Selenium Hub routes requests to Selenium Nodes with different</li>
+                        <li>OS/Browsers combinations to test the web application on.</li>
+                        </ul>
+                        <aside class='notes'>
+                            <ul>
+                                <li>All major browsers, and OS groups plus mobile in Selenium 3.0</li>
+                            </ul>
+                        </aside>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>What Benefit does Selenium have?</h2>
+                        <p class="fragment">Saves Time</p>
+                        <ul class="fragment"><li>which saves you and the budget!</li>
+                            <li><img src="img/fast.gif" width="400" height="400" alt="Backup"></li>
+                        <aside class="notes">
+                            No more running to the dev saying can u update stage or qa ASAP i have a client meetting or quick test to do
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Keeps Development Running Smooth</h2>
+                        <p>and on target by catching bugs early</p>
+                        <img src="img/smooth.gif" alt="Sandy">
+                        <img src='img/qabuild.png' alt= 'Qa build'>
+                        <aside class="notes">
+                            keeps env up to date so we can make sure the latest fixes are up for testing and clients
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Push Button Deployment testing!</h2>
+                        <p>Soon to come not yet</p>
+                        <img src="img/pushbutton.gif" alt="Spooning">
+                        <aside class="notes">
+                        we have the ablilty to do this now but we need some more error checking before we deploy to stage 
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+                        tech leads checkout new branches now
+                         More for our staging envoriments as stage is not updated on the fly as it is client faceing for UAT  
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Push button code promotion</h2>
+                        <p>Deploys</p>
+                        <p></p>
+                        <img src="img/launch.gif" alt="Cowboy">
+                        <aside class="notes">
+                            currently the way tha we use this for code promotion is that if all jiras are passed and the selenium suite passes the code is ready for the next stage of dev
+                            change branching or update to a particlular branch is how we use this
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>C&T Automation and when to do it</h2>
+                        <img src="img/ai_auto.gif" alt="pumpkin">
+                    </section>
+                   
+                  <section>
+                        <h2>Best Canidates</h2>
+                        <ul>
+                            <li >CRUD Routines</li>
+                            <li>Smoke Testing</li>
+                            <li>Large permutaion sets</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h1>Known Issues</h1>
+                        <ul>
+                            <li >IFRAMES</li>
+                            <li>Drag and drop</li>
+                            <li>Layered navigations with drawers</li>
+                        </ul>
+                    </section>
+                     <section>
+                        <h1>Coding in</h1>
+                        <h2>Selenium</h2>
+                        
+                    </section>
+                    <section>
+                        <h2>Selenium with webdriver<h2>
+                            <h2>ABA Aem Login</h2>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+                            <pre><code data-trim contenteditable>
+var expect = require('chai').expect;
+var FormPage = require('../pageobjects/form.page');
+var page = require('../pageobjects/page')
 
-		<script>
-			// More info https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				history: true,
+describe('auth form', function () {
+    it('should deny access with wrong creds', function () {
+        FormPage.open_login();
+        browser.saveScreenshot('./first1.jpg');
+        FormPage.username.setValue('foo');
+        FormPage.password.setValue('bar');
+        FormPage.submit();
+        browser.saveScreenshot('./first2.jpg');
+        expect(FormPage.flash.getText()).to.contain('User name and password do not match');
+    });
 
-				// More info https://github.com/hakimel/reveal.js#dependencies
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+    it('should allow access with correct creds', function () {
+        FormPage.open_login();
+        FormPage.username.setValue('admin');
+        FormPage.password.setValue('ABAcm$');
+        FormPage.submit();
+        page.getbaseurl();
+        browser.saveScreenshot('./second.jpg');
+        expect(browser.getUrl()).to.contain('/projects.html/content/projects');
+    });
+});
+                            </code></pre>
+                            <aside class='notes'>
+                                <p>This logs into the AEM backend and checks for an error message for incorrect login _------demo script in chrome</p>
+                            </aside>
+                        </section>
+                    <section>
+                        <h2>Selenium with webdriver<h2>
+                            <h2>ABA Aem Login</h2>
+                            <pre><code data-trim contenteditable>
+var page = require('./page')
+
+var formPage = Object.create(page, {
+    /**
+     * define elements
+     */
+    username: { get: function () { return browser.element('#username'); } },
+    password: { get: function () { return browser.element('#password'); } },
+    form:     { get: function () { return browser.element('#login'); } },
+    flash:    { get: function () { return browser.element('#error'); } },
+
+    /**
+     * define or overwrite page methods
+     */
+    open_login: {
+        value: function() {
+            browser.url('/', 'login')
+        }
+    },
+
+    submit: { value: function() {
+        this.form.submitForm();
+    } }
+});
+
+module.exports = formPage
+    
+
+                            </code></pre>
+                            <aside class='notes'>
+                                <p>This logs into the AEM backend and checks for an error message for incorrect login _------demo script in chrome</p>
+                            </aside>
+                        </section>
+                </section>
+                <section>
+                    <h2>Stay Tuned for more on these:</h2>
+                    <ul><li class='fragment'><a href='https://http://webdriver.io/'>WebdriverIO (JS library)</a></li>
+                            <li class='fragment'><a href='http://www.seleniumhq.org/'>Selenium Org</a></li>
+                            <li class='fragment'><a href='https://addons.mozilla.org/en-us/firefox/addon/selenium-ide-button/'>IDE (Firefox Plugin)</a></li>
+                        </ul>
+                </section>
+                <section>
+                    <h2>Questions?</h2>
+                    <img src="img/questions.jpg" alt="inspector">
+                </section>
+            </div>
+
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+
+        <script>
+            // More info https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                history: true,
+
+                // More info https://github.com/hakimel/reveal.js#dependencies
+                dependencies: [
+                    { src: 'plugin/markdown/marked.js' },
+                    { src: 'plugin/markdown/markdown.js' },
+                    { src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+                ]
+            });
+        </script>
+    </body>
 </html>
