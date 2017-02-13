@@ -13,11 +13,15 @@
         <link rel="stylesheet" href="lib/css/zenburn.css">
         <style>
             #left {
-              width: 200px;
+              width: 40%;
+              display: inline-block;
               float: left;
             }
             #right {
-              margin-left: 200px;
+              width: 60%;
+              display: inline-block;
+              float: left;
+              font-size: 25px
               /* Change this to whatever the width of your left column is*/
             }
             .clear {
@@ -51,124 +55,216 @@
                 <section>
                         <h2>What we wanted in a tool</h2>
                         <ul>
-                            <li>Can test web site functionality</li>
-                            <li>Can test JavaScript functionality</li>
-                            <li>Can be run manually from command line</li>
-                            <li>Can be run automatically using CI</li>
-                            <li>**Have an easy to learn language for non programmers**</li>
-                            <li>Q/A personnel wiuth basic knowledge of HTML and JavaScript can use</li>
-                            <li>Uses open source software only (except cloud based testing platforms)</li>
-                            <li>Can run tests on multiple OS/Browser versions and combinations</li>
+                            <li>Able to test a websites functionality and interactions</li>
+                            <li>CI and manual implementations capable</li>
+                            <li>Uses an easy-to-read format for non-programmers</li>
+                            <li>Easily supported within current tech stacks</li>
+                            <li>Preferably uses open source software (except cloud-based  platforms)</li>
+                            <li>Able to run tests on multiple OS/Browser versions and combinations</li>
                         </ul>
                 </section>  
-                </section>
+            </section>
                 <section>
-                    <section>
-                        <h2>Selenium With JS Bindings</h2>
+                    <section data-transition="fade-in fade-out">
+                        <h2>What can Selenium Do</h2>
+                        <p><ul>
+                            <li>Verify elements on a page</li>
+                            <li>Verify URL and link text</li>
+                            <li>Populate form data and submit</li>
+                            <li>Validate form errors</li>
+                            <li>Validate CSS properties</li>
+                            <li>Test web apps on multiple OS/browser combinations</li>
+                            <li>Selenium 3.0 supports mobile apps</li>
+                            </ul>
+                        </p>
+                        <aside class="notes">
+                            ""
+                        </aside>
+                    </section>
+                    <section data-transition="fade-out">
+                        <h2>Selenium & JS to the rescue</h2>
+                        <h3>Framework specifics</h3>
                         <ul>
-                        <li>Node - JS runtime environment</li>
-                        <li>Mocha – test runner framework and executes the test scripts (runner)</li>
-                        <li>Should – assertion library</li>
-                        <li>Web Driver IO – browser control bindings (JS programming language bindings - communicates with Selenium)</li>
-                        <li>Selenium – browser abstraction and running factory (starts and communicates with browser) Grunt - javascript task</li>runner
-                        <li>Grunt-WebDriverIO - plugin for Grunt with Mocha + Web Driver IO as test runner Browser/Mobile drivers + Browsers (IE, Chrome, Firefox, Safari)</li></ul>
+                        <li>Node.js: JavaScript runtime environment</li>
+                        <li>Mocha: test runner framework that executes test scripts</li>
+                        <li>Should/Expect: assertion library</li>
+                        <li>WebdriverIO: browser control bindings (JS programming language bindings - communicates with Selenium)</li>
+                        <li>Selenium: browser abstraction and running factory (starts and communicates with browser) Grunt - JavaScript task runner</li>
+                        <li>grunt-webdriver: plugin for Grunt with Mocha + WebdriverIO as test runner; includes Browser/Mobile drivers + Browsers (IE, Chrome, Firefox, Safari)</li></ul>
+                        <br></br>
+                        <a href='http://webdriver.io/api.html'>WebdriverIO (Commands)</a>
                     <aside class='notes'>
                             <ul>
-                                <li>All major browsers, and OS groups plus mobile in Selenium 3.0</li>
+                                <li></li>
                             </ul>
                         </aside>
                     </section>
                     <section> 
                         <div id="container">
-                            <div id="left">
+                             <div id="left">
                               <img src="img/LocalSeleniumsetup.png" alt="LocalSeleniumsetup">
                             </div>
                             <div id="right">
-                                <img src='img/qabuild.png' alt= 'Qa build'>
+                                <h2>Local Setup</h2>
+                                <ul>
+                                <li class="fragment fade-up">Node.js: Runs the Mocha test-framework and test-runner for the scripts.</li>
+                                <li class="fragment fade-up">WebdriverIO: Communication gateway for JS and Selenium using the JSON Wire Protocol.</li>
+                                <li class="fragment fade-up">Selenium invokes local browser using a driver to test the web application.</li>
+                                </ul>
                             </div>
                         </div>
-                    
-                        <h2>SELENIUM GRID SETUP</h2>
-                        <ul>
-                        <li>Node runs Mocha test framework and runner of test script.</li>
-                        <li>Should is the assertion library.</li>
-                        <li>Web Driver IO communicates with Selenium Hub using JSON Wire Protocol.</li>
-                        <li>Selenium Hub routes requests to Selenium Nodes with different</li>
-                        <li>OS/Browsers combinations to test the web application on.</li>
-                        </ul>
                         <aside class='notes'>
                             <ul>
-                                <li>All major browsers, and OS groups plus mobile in Selenium 3.0</li>
+                                <li></li>
                             </ul>
                         </aside>
                     </section>
-                </section>
-                <section>
-                    <section>
-                        <h2>What Benefit does Selenium have?</h2>
-                        <p class="fragment">Saves Time</p>
-                        <ul class="fragment"><li>which saves you and the budget!</li>
-                            <li><img src="img/fast.gif" width="400" height="400" alt="Backup"></li>
-                        <aside class="notes">
-                            No more running to the dev saying can u update stage or qa ASAP i have a client meetting or quick test to do
+                    <section> 
+                        <div id="container">
+                             <div id="left">
+                              <img src="img/gridSetup.png" alt="Grid Setup">
+                            </div>
+                            <div id="right">
+                                <h2>Cloud Setup</h2>
+                                <ul>
+                                <li>Node.js: Runs the Mocha test-framework and test-runner for the scripts.</li>
+                                <li>Should/Expect: Assertion librarys for the scripts.</li>
+                                <li>WebdriverIO: Communication gateway for JS and cloud-based testing platform using JSON Wire Protocol. (Saucelabs, Browserstack, ...)</li>
+                                <li>Cloud-based testing platform will automatically setup the correct OS/Browser combinations to test the web app.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <aside class='notes'>
+                            <ul>
+                                <li></li>
+                            </ul>
                         </aside>
                     </section>
                     <section>
-                        <h2>Keeps Development Running Smooth</h2>
-                        <p>and on target by catching bugs early</p>
-                        <img src="img/smooth.gif" alt="Sandy">
-                        <img src='img/qabuild.png' alt= 'Qa build'>
-                        <aside class="notes">
-                            keeps env up to date so we can make sure the latest fixes are up for testing and clients
-                        </aside>
-                    </section>
-                    <section>
-                        <h2>Push Button Deployment testing!</h2>
-                        <p>Soon to come not yet</p>
-                        <img src="img/pushbutton.gif" alt="Spooning">
-                        <aside class="notes">
-                        we have the ablilty to do this now but we need some more error checking before we deploy to stage 
-
-                        tech leads checkout new branches now
-                         More for our staging envoriments as stage is not updated on the fly as it is client faceing for UAT  
-                        </aside>
-                    </section>
-                    <section>
-                        <h2>Push button code promotion</h2>
-                        <p>Deploys</p>
-                        <p></p>
-                        <img src="img/launch.gif" alt="Cowboy">
-                        <aside class="notes">
-                            currently the way tha we use this for code promotion is that if all jiras are passed and the selenium suite passes the code is ready for the next stage of dev
-                            change branching or update to a particlular branch is how we use this
+                        <p class="fragment grow">grow</p>
+                        <p class="fragment shrink">shrink</p>
+                        <p class="fragment fade-out">fade-out</p>
+                        <p class="fragment fade-up">fade-up (also down, left and right!)</p>
+                        <p class="fragment current-visible">visible only once</p>
+                        <p class="fragment highlight-current-blue">blue only once</p>
+                        <p class="fragment highlight-red">highlight-red</p>
+                        <p class="fragment highlight-green">highlight-green</p>
+                        <p class="fragment highlight-blue">highlight-blue</p>
                     </section>
                 </section>
                 <section>
                     <section>
-                        <h2>C&T Automation and when to do it</h2>
-                        <img src="img/ai_auto.gif" alt="pumpkin">
+                        <h2>Selenium Strategy</h2>
+                        <img src="" alt="">
                     </section>
-                   
+                    
                   <section>
-                        <h2>Best Canidates</h2>
+                        <h2>Page Objects</h2>
+                        <div id="left">
+                            <img src="img/pageobject.jpg" alt="Grid Setup">
+                        </div>
+                        <div id="right">
+                            <ul>
+                                <li>Allows for re-use</li>
+                                <li>Minor edits for changes in the DOM</li>
+                                <li>Has its limitations</li>
+                            </ul>
+                            </div>
+                        <aside class="notes">
                         <ul>
-                            <li >CRUD Routines</li>
-                            <li>Smoke Testing</li>
-                            <li>Large permutaion sets</li>
+                        <li>Since well-named methods in classes are easy to read, this works as an elegant way to implement test routines that are both readable and easier to maintain or update in the future. 
+
+                        1. Page Objects represent the html source relatively well, however they have their own limitations on representing the page navigation and DOM current state</li>
+                        <li>2. With so many java script libraries that implement ajax calls these days, implementing call backs (aka. making our tests synchronous to handle the partial DOM state changes) has different strategies based on the strategy that was followed “by the application using that particular js library“. For example, on this website, we talked about Handling ajax with jQuery, angular,YUI and prototype.Recently I had an opportunity to work with parse api’s with backbone.js framework. Haven’t found a global listener tracker on parse api’s that I can wait before moving further in my tests [same strategy we followed with jQuery, angular etc.]</li>
+                        <li>3. The issues are generally around flaky tests and getting “Stale Element Exceptions“. One best practice to fix this is to model our page-objects very closely to align with the behavior and state transitions of the DOM and that is only as good until new js scripts get introduced into the web application js resource stack.</li>
                         </ul>
+                        </aside>
                     </section>
                     <section>
-                        <h1>Known Issues</h1>
+                        <h2>XQuery & RegEx is your friend</h2>
                         <ul>
-                            <li >IFRAMES</li>
-                            <li>Drag and drop</li>
-                            <li>Layered navigations with drawers</li>
+                            <li>XQuery is an XML query language that makes use of XPath to query XML structures. This is less flaky than full xpaths</li>
+                            <ul class="fragment highlight-red" ><li>//div[@class='content_body']/ul[2]</li></ul>
+                            <li>Css values can be used, but if they are non unique there will be collions</li>
+                            <ul class="fragment highlight-red"><li>#aba-member-benefits__title</li></ul>
                         </ul>
                     </section>
                      <section>
-                        <h1>Coding in</h1>
-                        <h2>Selenium</h2>
+                        <h2>Common Pitfalls</h2>
+                        <ul>
+                            <li class="fragment highlight-current-blue">Slow to run</li>
+                            <li class="fragment highlight-current-blue">#Automate_Everything</li>
+                            <li class="fragment highlight-current-blue">Hard to maintain</li>
+                            <li class="fragment highlight-current-blue">Not Reliable</li>
+                        </ul>
+                        <aside class="notes">
+                        <ul>
+                        <li>1. It’s slow to run
+                        It’s much faster than manual tester.
+                        manual tester must check the system through the UI it is very reasonable to replace the manual tests with automated.</li>
                         
+                        <li>2. Hard to maintain
+                        “Test code is code”
+                        If one says “UI tests are Hard to maintain” that means he doesn’t do it well, Please read about PageObjects</li>
+                        
+                        
+                        <li>3. And hard to make reliable.
+                        It’s true that Selenium throws exceptions
+                        but if you learn about those exceptions – you can avoid them all
+                        for example:
+                        “NoSuchElementException” can be solved by ImplicitlyWait
+                        “StaleElementReferenceException”,
+                        “ElementNotVisible\ClickbleException”, etc
+                        those exception can be solved by retrying to perform the action
+                        TryClick()
+                        or by explicitly wait</li>
+                        
+                        <li>In conclusion – if one is experienced with Selenium —
+                        his tests will be reliable.</li>
+                        </ul>
+                        </aside>
+                    </section>
+
+                     <section>
+                        <h2>Real issues</h2>
+                        <ul>
+                            <li>Iframes</li>
+                            <li>Drag and Drop</li>
+                            <li>Menus with nested layers</li>
+                            <li>Mid-state animation testing</li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Install and Run</h2>
+                        <ul>
+                        <li><pre><code data-trim contenteditable>
+                        mkdir webdriverio-test && cd webdriverio-test
+                        #Download latest selenium and chrome driver
+                        curl -O http://selenium-release.storage.googleapis.com/3.0/selenium-server-standalone-3.0.1.jar
+                        curl -O https://chromedriver.storage.googleapis.com/2.27/chromedriver_mac64.zip
+
+                        #start selenium server
+                        java -jar selenium-server-standalone-3.0.1.jar
+                        
+                        #install webdriver.io
+                        npm install webdriverio
+
+                        #configuration
+                        ./node_modules/.bin/wdio config
+
+                        #run your test alone
+                        node test.js
+
+                        #run your test with test runner
+                        ./node_modules/.bin/wdio
+
+
+
+                        </code><pre></li>
+                    
+                        </ul>
                     </section>
                     <section>
                         <h2>Selenium with webdriver<h2>
@@ -207,37 +303,9 @@ describe('auth form', function () {
                         </section>
                     <section>
                         <h2>Selenium with webdriver<h2>
+                        
                             <h2>ABA Aem Login</h2>
-                            <pre><code data-trim contenteditable>
-var page = require('./page')
-
-var formPage = Object.create(page, {
-    /**
-     * define elements
-     */
-    username: { get: function () { return browser.element('#username'); } },
-    password: { get: function () { return browser.element('#password'); } },
-    form:     { get: function () { return browser.element('#login'); } },
-    flash:    { get: function () { return browser.element('#error'); } },
-
-    /**
-     * define or overwrite page methods
-     */
-    open_login: {
-        value: function() {
-            browser.url('/', 'login')
-        }
-    },
-
-    submit: { value: function() {
-        this.form.submitForm();
-    } }
-});
-
-module.exports = formPage
-    
-
-                            </code></pre>
+                            <img src="img/new.gif" alt="LocalSeleniumsetup">
                             <aside class='notes'>
                                 <p>This logs into the AEM backend and checks for an error message for incorrect login _------demo script in chrome</p>
                             </aside>
