@@ -129,7 +129,7 @@
                                 <ul>
                                 <li>Node.js: Runs the Mocha test-framework and test-runner for the scripts.</li>
                                 <li>Should/Expect: Assertion librarys for the scripts.</li>
-                                <li>WebdriverIO: Communication gateway for JS and cloud-based testing platform using JSON Wire Protocol. (Saucelabs, Browserstack, ...)</li>
+                                <li>WebdriverIO: Communication gateway for JS and cloud-based testing platform using JSON Wire Protocol. (Sauce Labs, BrowserStack, ...)</li>
                                 <li>Cloud-based testing platform will automatically setup the correct OS/Browser combinations to test the web app.</li>
                                 </ul>
                             </div>
@@ -140,17 +140,6 @@
                             </ul>
                         </aside>
                     </section>
-                    <section>
-                        <p class="fragment grow">grow</p>
-                        <p class="fragment shrink">shrink</p>
-                        <p class="fragment fade-out">fade-out</p>
-                        <p class="fragment fade-up">fade-up (also down, left and right!)</p>
-                        <p class="fragment current-visible">visible only once</p>
-                        <p class="fragment highlight-current-blue">blue only once</p>
-                        <p class="fragment highlight-red">highlight-red</p>
-                        <p class="fragment highlight-green">highlight-green</p>
-                        <p class="fragment highlight-blue">highlight-blue</p>
-                    </section>
                 </section>
                 <section>
                     <section>
@@ -159,15 +148,16 @@
                     </section>
                     
                   <section>
-                        <h2>Page Objects</h2>
+                        
                         <div id="left">
-                            <img src="img/pageobject.jpg" alt="Grid Setup">
+                            <img src="img/pageobject.jpg" alt="Grid Setup" height="280" width="380">
                         </div>
                         <div id="right">
+                            <h2>Page Objects</h2>
                             <ul>
-                                <li>Allows for re-use</li>
+                                <li>Allows for reuse</li>
                                 <li>Minor edits for changes in the DOM</li>
-                                <li>Has its limitations</li>
+                                <li>Page objects should have a sane number of items</li>
                             </ul>
                             </div>
                         <aside class="notes">
@@ -182,11 +172,14 @@
                     </section>
                     <section>
                         <h2>XQuery & RegEx is your friend</h2>
+                        <br></br>
                         <ul>
-                            <li>XQuery is an XML query language that makes use of XPath to query XML structures. This is less flaky than full xpaths</li>
+                            <li>XQuery is an XML query language that makes use of XPath to query XML structures. This is less flaky than full xpaths.</li>
                             <ul class="fragment highlight-red" ><li>//div[@class='content_body']/ul[2]</li></ul>
-                            <li>Css values can be used, but if they are non unique there will be collions</li>
+                            <br></br>
+                            <li>CSS values can be used, but if they are non-unique, there will be issues.</li>
                             <ul class="fragment highlight-red"><li>#aba-member-benefits__title</li></ul>
+                            <br></br>
                         </ul>
                     </section>
                      <section>
@@ -195,7 +188,7 @@
                             <li class="fragment highlight-current-blue">Slow to run</li>
                             <li class="fragment highlight-current-blue">#Automate_Everything</li>
                             <li class="fragment highlight-current-blue">Hard to maintain</li>
-                            <li class="fragment highlight-current-blue">Not Reliable</li>
+                            <li class="fragment highlight-current-blue">Not reliable</li>
                         </ul>
                         <aside class="notes">
                         <ul>
@@ -228,7 +221,7 @@
                      <section>
                         <h2>Real issues</h2>
                         <ul>
-                            <li>Iframes</li>
+                            <li>IFrames</li>
                             <li>Drag and Drop</li>
                             <li>Menus with nested layers</li>
                             <li>Mid-state animation testing</li>
@@ -312,15 +305,8 @@ describe('auth form', function () {
                         </section>
                 </section>
                 <section>
-                    <h2>Stay Tuned for more on these:</h2>
-                    <ul><li class='fragment'><a href='https://http://webdriver.io/'>WebdriverIO (JS library)</a></li>
-                            <li class='fragment'><a href='http://www.seleniumhq.org/'>Selenium Org</a></li>
-                            <li class='fragment'><a href='https://addons.mozilla.org/en-us/firefox/addon/selenium-ide-button/'>IDE (Firefox Plugin)</a></li>
-                        </ul>
-                </section>
-                <section>
                     <h2>Questions?</h2>
-                    <img src="img/questions.jpg" alt="inspector">
+                    <img src="img/questionswbread.gif" alt="inspector">
                 </section>
             </div>
 
